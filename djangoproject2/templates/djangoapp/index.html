@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{%load staticfiles %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Home Page</title>
+</head>
+<body>
+
+  <img src="{% static 'images/ben-profile.jpg' %}" alt="">
+
+  {% if home_content %}
+    <table width='650' border='1'>
+      <tr>
+        <th>Name</th>
+        <th>URL</th>
+      </tr>
+      {% for page in home_content %}
+      <tr>
+        <td>{{ page.name }}</td>
+        <td>{{ page.url }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <h2>No page found</h2>
+    {% endif %}
+
+</body>
+</html>
