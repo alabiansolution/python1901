@@ -17,11 +17,13 @@
       <tr>
         <th>Name</th>
         <th>URL</th>
+        <th>Message</th>
       </tr>
       {% for page in home_content %}
       <tr>
         <td>{{ page.name }}</td>
         <td>{{ page.url }}</td>
+        <td>{{ page.message }}</td>
       </tr>
       {% endfor %}
     </table>

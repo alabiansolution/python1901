@@ -3,5 +3,4 @@ from djangoapp import views
 
 urlpatterns = [
     url(r'^$', views.about, name='about'),
-
 ]

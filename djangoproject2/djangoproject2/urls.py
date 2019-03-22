@@ -19,6 +19,7 @@ from djangoapp import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^formpage/', views.form_view, name='form_view'),
     url(r'^about/', include('djangoapp.urls')),
     url(r'^admin/', admin.site.urls),
 ]

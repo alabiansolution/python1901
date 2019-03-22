@@ -12,9 +12,10 @@ class WebPage(models.Model):
     topic = models.ForeignKey(Topics)
     name = models.CharField(max_length=265, unique=True)
     url = models.CharField(max_length= 265, unique=True)
+    message = models.TextField(default='Something goes here')
 
     def __str__(self):
-        return self.name
+        return self.name + self.message
 
 class AccessRecords(models.Model):
     webpage = models.ForeignKey(WebPage)
